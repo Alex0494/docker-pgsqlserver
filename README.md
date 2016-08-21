@@ -15,3 +15,18 @@ to download the pre-built image from my dockerhub
 You can find the image @ dockerhub.com/alex0494/pgsqlserver
 
 If you find this helpful or encounter any bugs or issues shoot me an email at: aries0494@icloud.com 
+
+edit1:
+
+to access phppgadmin afert you launched the image, in your browser type: 
+
+> localhost:8081/phppgadmin
+
+if the server responds with a 402: UNAUTHORIZED:
+
+> sudo docker exec -i -t <container-id> /bin/bash
+> vim /etc/apache2/conf-enabled/phppgadmin.conf
+
+comment out or remove “Require local”, and restart the container.
+
+Enjoy.
