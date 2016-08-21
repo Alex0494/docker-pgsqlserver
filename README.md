@@ -25,6 +25,7 @@ to access phppgadmin afert you launched the image, in your browser type:
 if the server responds with a 402: UNAUTHORIZED:
 
 > sudo docker exec -i -t <container-id> /bin/bash
+
 > vim /etc/apache2/conf-enabled/phppgadmin.conf
 
 comment out or remove “Require local”, and restart the container.
